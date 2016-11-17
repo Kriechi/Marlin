@@ -309,9 +309,9 @@
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
   #define K1 0.95 //smoothing factor within the PID
 
-  #define  DEFAULT_Kp 12.79
-  #define  DEFAULT_Ki 0.61
-  #define  DEFAULT_Kd 67.27
+  #define  DEFAULT_Kp 19.77
+  #define  DEFAULT_Ki 1.90
+  #define  DEFAULT_Kd 51.51
 
 #endif // PIDTEMP
 
