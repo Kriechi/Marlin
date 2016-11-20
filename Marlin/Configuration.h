@@ -467,13 +467,26 @@
  * Default Axis Steps Per Unit (steps/mm)
  * Override with M92
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 8000, 1000 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 8000, 96 }
+
+// XY: NEMA 17 motor with T2 belt and 20-tooth pulley:
+// steps_per_mm = (motor steps per rev * driver microstep) / (belt pitch pulley number of teeth)
+// (200 * 32) / (2 * 20) = 160
+
+// Z: NEMA 17 with standard pitch M5 threaded rod:
+// steps_per_mm = (motor_steps_per_rev * driver_microstep) / thread_pitch
+// (200 * 32) / 0.8 = 8000
+
+// E:
+// e_steps_per_mm = (motor_steps_per_rev * driver_microstep) * (big_gear_teeth / small_gear_teeth) / (hob_effective_diameter * pi)
+// (200 * 16) * (1 / 1) / (10.6ish * 3.14159) = 96
+
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 2, 10 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 2, 15 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
