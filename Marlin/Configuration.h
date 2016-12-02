@@ -486,7 +486,7 @@
  * Default Max Feed Rate (mm/s)
  * Override with M203
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 2, 15 }
+#define DEFAULT_MAX_FEEDRATE          { 100, 100, 1.75, 30 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -494,7 +494,7 @@
  *
  * Maximum start speed for accelerated moves: { X, Y, Z, E }
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 5000 }
+#define DEFAULT_MAX_ACCELERATION      { 4000, 4000, 120, 6000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -823,7 +823,7 @@
 
   // 3 arbitrary points to probe.
   // A simple cross-product is used to estimate the plane of the bed.
-  #define ABL_PROBE_PT_1_X 20
+  #define ABL_PROBE_PT_1_X 15
   #define ABL_PROBE_PT_1_Y 100
   #define ABL_PROBE_PT_2_X 130
   #define ABL_PROBE_PT_2_Y 20
@@ -867,7 +867,7 @@
 
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (2.5*60)
+#define HOMING_FEEDRATE_Z  (2*60)
 
 //=============================================================================
 //============================= Additional Features ===========================
